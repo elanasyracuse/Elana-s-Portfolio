@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Elana Savita Alphonso — Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="AI Software Engineer • Healthcare Technology • WCAG Compliance Automation" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- ===== Small overrides for avatar, footer, contact links, and the new glow cards ===== -->
+    <style>
+      /* Header avatar (replaces the diamond icon) */
+      .header-avatar{
+        width:96px;height:96px;border-radius:50%;object-fit:cover;
+        border:2px solid rgba(255,255,255,.35);
+        box-shadow:0 0 18px rgba(102,199,255,.35);
+        display:inline-block
+      }
+      /* Hide template footer */
+      #footer{display:none}
+
+      /* Contact links: clean alignment */
+      .contact-links{
+        display:flex;flex-direction:column;align-items:center;gap:1rem;margin-top:1.5rem
+      }
+      .contact-link{
+        display:flex;align-items:center;gap:10px;text-decoration:none;
+        color:#ffffffb3;font-size:1.05rem
+      }
+      .contact-link .icon{font-size:1.4rem}
+
+      /* ===== Glowing “card” design used for Experience & Projects ===== */
+      .exp-cards,.project-cards{
+        display:flex;flex-direction:column;gap:1.75rem;align-items:stretch
+      }
+      .exp-card,.project-card{
+        background:rgba(10,20,30,.55);
+        border:1.5px solid rgba(80,180,255,.25);
+        border-radius:16px;
+        padding:1.75rem 1.5rem;
+        backdrop-filter:blur(6px);
+        box-shadow:0 0 12px rgba(80,180,255,.15), 0 0 24px rgba(0,120,255,.1);
+        transition:all .3s ease;
+        max-width:680px;margin:0 auto
+      }
+      .exp-card:hover,.project-card:hover{
+        border-color:rgba(80,180,255,.5);
+        box-shadow:0 0 18px rgba(100,200,255,.35), 0 0 40px rgba(0,120,255,.25);
+        transform:translateY(-3px)
+      }
+      .exp-card h3,.project-card h3{
+        color:#e6f3ff;font-size:1.15rem;font-weight:700;letter-spacing:.06em;margin:0 0 .4rem
+      }
+      .exp-meta{color:rgba(200,220,255,.7);font-style:italic;margin-bottom:.75rem}
+      .exp-card p,.project-card p{color:#f0f6ff;font-size:.98rem;line-height:1.7;margin:.3rem 0}
+      .project-card strong{color:#8cd0ff}
+    </style>
+  </head>
+  <body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="centered-text">
+
+      <!-- Header -->
+      <header id="header">
+        <div class="logo">
+          <!-- Your photo instead of the gem icon -->
+          <img src="profile.jpg" alt="Elana Savita Alphonso" class="header-avatar" />
+        </div>
+        <div class="content">
+          <div class="inner">
+            <h1>ELANA <span style="color:#67c7ff">SAVITA</span> <span style="color:#009ef9">ALPHONSO</span></h1>
+            <p style="opacity:.9">
+              <strong>Software Tester</strong> &nbsp;|&nbsp;
+              <strong>Software Developer</strong> &nbsp;|&nbsp;
+              <strong>Technical Project Manager</strong> <br/>
+              <p>USING AI AND AUTOMATION TO BUILD ACCESSIBLE, INCLUSIVE TECHNOLOGY FOR HEALTHCARE AND BEYOND</p>
+            </p>
+
+            <p>
+              <!-- Only one CTA now -->
+              <a href="#projects" class="button primary">VIEW PROJECTS</a>
+            </p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <!--<li><a href="#intro">Home</a></li>-->
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main">
+
+        <!-- Home 
+        <article id="intro">
+          <h2 class="major">Welcome</h2>
+          <img src="images/profile.jpg" alt="Elana Savita Alphonso" class="header-avatar" style="width:120px;height:120px;margin-bottom:1.2rem;" />
+          <p>
+            <strong>AI Software Engineer</strong> &nbsp;|&nbsp; <strong>Healthcare Technology</strong> &nbsp;|&nbsp; <strong>WCAG Compliance Automation</strong><br/>
+            Deploying AI to solve accessibility challenges in digital health.
+          </p>
+          <p><a href="#projects" class="button primary">See Featured Projects</a></p>
+        </article>-->
+
+        <!-- Featured Projects (glowing cards) -->
+        <article id="projects">
+          <h2 class="major">Featured Projects</h2>
+
+          <div class="project-cards">
+
+            <section class="project-card">
+              <h3>Course Navigator — RAG Chatbot</h3>
+              <p>
+                Addressed the challenge of students navigating fragmented course information across multiple PDFs by developing a
+Retrieval-Augmented Generation chatbot. Built a vector database with ChromaDB and implemented OpenAI
+text-embedding-3-small for semantic retrieval, delivering context-grounded answers through a Streamlit UI.
+Optimized performance with session-state caching, integrated source citations and guardrails to reduce
+hallucinations, and deployed a secure demo on Streamlit Cloud with secrets-based key management and CI tests for
+PDF parsing and retrieval accuracy.</p>
+              <p><strong>Stack:</strong> Python, ChromaDB, OpenAI API, Streamlit</p>
+            </section>
+
+            <section class="project-card">
+              <h3>AI-Powered Automated Testing System</h3>
+              <p>
+                Addressed the challenge of manually testing WCAG 2.1 AA compliance across 40,000+ web elements by engineering
+a scalable automated testing pipeline with Python, Selenium, and Azure AI. Integrated the system into the CI/CD
+pipeline to automatically detect and prevent accessibility and functional regressions before deployment
+              </p>
+              <p><strong>Stack:</strong> Python, Selenium, Azure AI, CI/CD</p>
+            </section>
+
+          </div>
+        </article>
+
+        <!-- About -->
+        <article id="about">
+          <h2 class="major">About Me</h2>
+          <p>I'm a software engineer who's found my passion at the intersection of AI, accessibility, and healthcare technology.</p>
+<br><p>At Upstate Medical University, I'm working on something I care deeply about: making sure everyone can access healthcare information online, regardless of their abilities. I built an AI pipeline using Azure Vision AI and Python that generates alt text for images across the hospital's websites—solving a backlog of over 40,000 images that were inaccessible to screen reader users. It's been incredible to see how automation can tackle problems at scale while directly improving patients' digital experiences.</p>
+<br><p>What excites me most is using technology to solve real healthcare challenges. I've worked on automated testing for a bilingual HIV support platform—making sure Spanish-speaking patients can access critical resources in their language. I built a RAG-powered chatbot to help students navigate complex medical course information more easily. And I've spent countless hours converting PDFs into accessible formats so that people using keyboards or screen readers can independently navigate healthcare websites. Each project taught me something new about how thoughtful engineering directly impacts people's ability to access care and information.</p>
+<br><p>I came to this field through a somewhat winding path—I started in enterprise QA at Larsen & Toubro Infotech testing financial systems, and even spent time analyzing athlete movement data in rural India. Those experiences taught me to be detail-oriented, resourceful, and always think about the end user. Now at Syracuse University pursuing my MS in Information Management, I'm combining everything I've learned with new skills in AI and accessibility.</p>
+<br><p>I genuinely believe healthcare technology should work seamlessly for everyone—and I'm excited to keep learning, building, and contributing to that goal. I love the problem-solving aspect of this work, and I'm energized by teams that care as much about impact as they do about innovation.</p>        </article>
+
+        <!-- Experience (stacked glowing story cards) -->
+        <article id="experience">
+          <h2 class="major">Professional Experience</h2>
+
+          <div class="exp-cards">
+
+            <!-- Upstate Medical University -->
+<section class="exp-card">
+  <h3>Software Engineer — Intern</h3>
+  <p class="exp-meta"><em>Upstate Medical University · Syracuse, NY · May 2025 – Present</em></p>
+  <p><strong>What I Walked Into:</strong> I'll be honest—before this internship, I knew accessibility was important, but I'd never really worked in it. My first week, I learned that the university hospital had over 40,000 images without alt text. My supervisor explained how this affected patients using screen readers, and it just clicked for me—these weren't just compliance checkboxes, these were real barriers for people trying to access healthcare information.</p>
+  <p><strong>What I Got to Do:</strong> I got to build something I'd never tried before: an AI-powered pipeline using Azure Vision AI to auto-generate alt text. It was my first time working with Azure's AI services, and honestly, learning to integrate it with Python was both challenging and exciting. I loved the problem-solving aspect—figuring out how to make the AI generate contextually appropriate descriptions, not just generic ones. But what really surprised me was how much I enjoyed the hands-on work too. I spent time converting PDFs to accessible HTML, learning Cascade CMS, and using tools like AXE and WAVE to audit websites. Working with the web team taught me that accessibility work is this beautiful mix of automation and human judgment—you need both.</p>
+  <p><strong>What Stuck With Me:</strong> I learned that accessibility is deeply creative work. Every website has different needs, and I got better at thinking from users' perspectives—would this alt text actually help someone? Is this navigation logical with just a keyboard?</p>
+  <p><strong>The biggest takeaway?</strong> I discovered I really love work that has immediate, tangible impact. When we cleared those backlogs and I could see the before/after difference in accessibility scores, it felt meaningful. Plus, the team was incredibly supportive—they taught me so much about web governance and compliance standards.</p>
+</section>
+
+
+<!-- iConsult -->
+<section class="exp-card">
+  <h3>Software Development Engineer</h3>
+  <p class="exp-meta"><em>iConsult (HIV Support Startup) · Syracuse, NY · Sept 2025 – Present</em></p>
+  <p><strong>Stepping Into Something New:</strong> I joined iConsult while still at Syracuse, and it was my first experience with a startup environment—very different from my previous corporate role! The team was small, the mission was important (HIV support services), and I was excited to contribute. They needed help with testing, especially around their bilingual platform, which served both English and Spanish-speaking communities.</p>
+  <p><strong>What I Worked On:</strong> I set up automated testing pipelines using Selenium and Python—tools I'd used before, but this was my first time building the testing infrastructure from scratch rather than adding to existing frameworks. That ownership was new and a little scary, but really rewarding. What fascinated me was working on the multilingual aspects. I learned that testing bilingual platforms isn't just about checking if text translates—you have to think about how Spanish phrases are often longer, how that affects UI layouts, and how medical terminology needs to be culturally appropriate. I worked closely with the outreach team to understand what mattered to users, and that collaboration taught me so much.</p>
+  <p><strong>What I Took Away:</strong> This experience showed me how much I enjoy the intersection of technical work and human impact. When we reduced translation bugs and the team shared positive user feedback, it reminded me why I got into tech in the first place. I also learned that startups move fast. You have to be comfortable with ambiguity, figure things out independently, and be okay with your role evolving. It was energizing, and it showed me I thrive in environments where I can wear multiple hats.</p>
+</section>
+
+
+<!-- Lonar Central Public School -->
+<section class="exp-card">
+  <h3>Sports Data Analyst</h3>
+  <p class="exp-meta"><em>Lonar Central Public School · Mumbai, India · Dec 2022 – Mar 2024</em></p>
+  <p><strong>How This Even Happened:</strong> This one's a bit different! After leaving my software job in Mumbai, I moved back home and started volunteering at a local athletics academy in a rural area. I wasn't planning to make it a "tech role," but when the coaches learned about my background, they got curious—could data actually help these kids improve? I was intrigued. I'd never worked with sports analytics before, and honestly, I was ready for something hands-on and community-focused after corporate life.</p>
+  <p><strong>What I Figured Out:</strong> I started using Kinovea, this free motion analysis software, to record and analyze athletes' running form. It was fascinating learning a completely new domain—understanding biomechanics, what makes good sprinting form, how tiny adjustments in angle or stride can change speed. I worked with about 40 athletes, and seeing them improve by understanding their own movement data was incredible. The coolest part? I got to be resourceful in ways I'd never been before. When we needed equipment we couldn't afford, I designed custom training tools with local materials. When I realized the program needed better visibility to get funding, I taught myself enough HTML and CSS to build a simple portfolio website showcasing the athletes' progress. That website actually helped us secure some funding, which felt amazing.</p>
+  <p><strong>What This Taught Me:</strong> This experience reminded me that technical skills are most powerful when you combine them with genuine curiosity and a willingness to learn new domains. I wasn't an expert in sports science, but I was willing to learn, ask questions, and collaborate with people who were experts. It also taught me that some of my best work happens when I care deeply about the people I'm helping. Those athletes and coaches were so dedicated, and being part of their journey was one of the most fulfilling things I've done. It showed me I want my career to involve work that means something to real communities.</p>
+</section>
+
+
+<!-- Larsen and Toubro Infotech -->
+<section class="exp-card">
+  <h3>Software Engineer</h3>
+  <p class="exp-meta"><em>Larsen and Toubro Infotech · Mumbai, India · Aug 2020 – Aug 2021</em></p>
+  <p><strong>My First Real Job:</strong> This was my first role after graduating—I was excited, nervous, and eager to prove myself! I joined as a Software Engineer working on a Client Risk Analysis Portal for a financial services client. It was a big, established company, very different from what I'm doing now, but it taught me so many fundamentals.</p>
+  <p><strong>What I Learned:</strong> I dove into test automation using Selenium and Java, which was challenging at first. I was writing and executing test cases, learning PL/SQL to validate database operations, and figuring out how all the pieces of a large enterprise application fit together. One thing I'm proud of: I noticed our testing focused heavily on UI but didn't validate the API layer thoroughly. I proposed integrating RESTful API testing into our framework, and my team lead supported it. Seeing that idea actually improve our regression coverage taught me that even junior engineers can contribute meaningful improvements—you just have to speak up thoughtfully.</p>
+  <p><strong>What Stuck:</strong> This role taught me the discipline of good QA work—attention to detail, thinking through edge cases, and understanding that every test case you write is potentially preventing a real problem down the line. I also learned how to work in a structured corporate environment—Agile ceremonies, working with cross-functional teams, documenting everything. These might sound basic, but they're foundations I still use today. Most importantly, it confirmed that I love the problem-solving aspect of software work, and it made me curious about other domains. That curiosity eventually led me to Syracuse and all these different experiences since then.</p>
+</section>
+
+
+          </div>
+        </article>
+
+        <!-- Contact (links only) -->
+        <article id="contact">
+          <h2 class="major">Contact</h2>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:elalphon@syr.edu" target="_blank" rel="noopener">
+              <span class="icon solid fa-envelope"></span><span>elalphon@syr.edu</span>
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/in/elanaalphonso/" target="_blank" rel="noopener">
+              <span class="icon brands fa-linkedin"></span><span>linkedin.com/in/elanaalphonso</span>
+            </a>
+            <a class="contact-link" href="https://github.com/elanasyracuse" target="_blank" rel="noopener">
+              <span class="icon brands fa-github"></span><span>github.com/elanasyracuse</span>
+            </a>
+          </div>
+        </article>
+
+      </div><!-- /#main -->
+
+      <!-- Footer (hidden via CSS) -->
+      <footer id="footer"></footer>
+    </div><!-- /#wrapper -->
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
